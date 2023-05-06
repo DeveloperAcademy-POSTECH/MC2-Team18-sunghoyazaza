@@ -14,6 +14,8 @@
 		7F0003E12A0020D4000F3B5B /* SungHozazaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0003E02A0020D4000F3B5B /* SungHozazaTests.swift */; };
 		7F0003EB2A0020D4000F3B5B /* SungHozazaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0003EA2A0020D4000F3B5B /* SungHozazaUITests.swift */; };
 		7F0003ED2A0020D4000F3B5B /* SungHozazaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0003EC2A0020D4000F3B5B /* SungHozazaUITestsLaunchTests.swift */; };
+		E50048652A0685F1005AD015 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50048642A0685F1005AD015 /* Colors.swift */; };
+		E50048672A068600005AD015 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50048662A068600005AD015 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		7F0003E62A0020D4000F3B5B /* SungHozazaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SungHozazaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0003EA2A0020D4000F3B5B /* SungHozazaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SungHozazaUITests.swift; sourceTree = "<group>"; };
 		7F0003EC2A0020D4000F3B5B /* SungHozazaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SungHozazaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E50048642A0685F1005AD015 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E50048662A068600005AD015 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				7F0003D32A0020D4000F3B5B /* Assets.xcassets */,
+				E50048642A0685F1005AD015 /* Colors.swift */,
+				E50048662A068600005AD015 /* Fonts.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -289,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50048672A068600005AD015 /* Fonts.swift in Sources */,
 				7F0003D22A0020D2000F3B5B /* MainView.swift in Sources */,
+				E50048652A0685F1005AD015 /* Colors.swift in Sources */,
 				7F0003D02A0020D2000F3B5B /* SungHozazaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
