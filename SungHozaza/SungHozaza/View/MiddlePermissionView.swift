@@ -1,10 +1,11 @@
 //
-//  MiddelPermissionView.swift
+//  MiddlePermissionView.swift
 //  SungHozaza
 //
 //  Created by 077tech on 2023/05/06.
 //
 
+import Foundation
 import SwiftUI
 
 struct MiddlePermissionView: View {
@@ -44,9 +45,7 @@ struct MiddlePermissionView: View {
             }
             .background(Color(hex: 0xD9E1FF))
             .cornerRadius(10)
-            
         }
-
     }
 }
 
