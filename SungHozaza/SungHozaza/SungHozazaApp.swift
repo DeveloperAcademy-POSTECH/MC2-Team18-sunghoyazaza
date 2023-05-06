@@ -11,7 +11,7 @@ import SwiftUI
 struct SungHozazaApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MiddlePermissionView()
         }
     }
 }

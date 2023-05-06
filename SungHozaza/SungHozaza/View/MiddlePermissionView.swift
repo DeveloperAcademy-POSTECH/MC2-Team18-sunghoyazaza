@@ -44,7 +44,7 @@ struct MiddlePermissionView: View {
             //나가기 버튼
             Button {
                 //TODO: 나가기 버튼 클릭 시 Action구현하기
-                print("나가기 clicked")
+                    print("나가기 clicked")
             } label: {
                 Text("나가기")
                     .foregroundColor(Color(hex: 0x0F0094))
