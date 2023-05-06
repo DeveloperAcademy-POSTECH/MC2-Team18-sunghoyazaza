@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F0003D02A0020D2000F3B5B /* SungHozazaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0003CF2A0020D2000F3B5B /* SungHozazaApp.swift */; };
-		7F0003D22A0020D2000F3B5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0003D12A0020D2000F3B5B /* ContentView.swift */; };
+		7F0003D22A0020D2000F3B5B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0003D12A0020D2000F3B5B /* MainView.swift */; };
 		7F0003D42A0020D4000F3B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F0003D32A0020D4000F3B5B /* Assets.xcassets */; };
 		7F0003D72A0020D4000F3B5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F0003D62A0020D4000F3B5B /* Preview Assets.xcassets */; };
 		7F0003E12A0020D4000F3B5B /* SungHozazaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0003E02A0020D4000F3B5B /* SungHozazaTests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		7F0003CC2A0020D2000F3B5B /* SungHozaza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SungHozaza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0003CF2A0020D2000F3B5B /* SungHozazaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SungHozazaApp.swift; sourceTree = "<group>"; };
-		7F0003D12A0020D2000F3B5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7F0003D12A0020D2000F3B5B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7F0003D32A0020D4000F3B5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F0003D62A0020D4000F3B5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F0003DC2A0020D4000F3B5B /* SungHozazaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SungHozazaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,8 +95,10 @@
 			isa = PBXGroup;
 			children = (
 				7F0003CF2A0020D2000F3B5B /* SungHozazaApp.swift */,
-				7F0003D12A0020D2000F3B5B /* ContentView.swift */,
-				7F0003D32A0020D4000F3B5B /* Assets.xcassets */,
+				E50048612A06840F005AD015 /* Resources */,
+				E500485E2A068318005AD015 /* Model */,
+				E500485F2A068320005AD015 /* View */,
+				E50048602A068325005AD015 /* View-Model */,
 				7F0003D52A0020D4000F3B5B /* Preview Content */,
 			);
 			path = SungHozaza;
@@ -125,6 +127,36 @@
 				7F0003EC2A0020D4000F3B5B /* SungHozazaUITestsLaunchTests.swift */,
 			);
 			path = SungHozazaUITests;
+			sourceTree = "<group>";
+		};
+		E500485E2A068318005AD015 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E500485F2A068320005AD015 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F0003D12A0020D2000F3B5B /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E50048602A068325005AD015 /* View-Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View-Model";
+			sourceTree = "<group>";
+		};
+		E50048612A06840F005AD015 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F0003D32A0020D4000F3B5B /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F0003D22A0020D2000F3B5B /* ContentView.swift in Sources */,
+				7F0003D22A0020D2000F3B5B /* MainView.swift in Sources */,
 				7F0003D02A0020D2000F3B5B /* SungHozazaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
