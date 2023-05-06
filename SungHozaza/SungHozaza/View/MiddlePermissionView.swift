@@ -65,3 +65,5 @@ struct MiddlePermissionView_Previews: PreviewProvider {
         MiddlePermissionView()
     }
 }
+
+
