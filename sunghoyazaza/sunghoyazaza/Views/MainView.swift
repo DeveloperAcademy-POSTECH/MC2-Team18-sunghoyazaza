@@ -45,9 +45,7 @@ struct MainView: View {
                 //수면계획 택스트
                 Text("수면 계획")
                     .padding(.horizontal)
-                
                 Spacer()
-                
                 // 편집 버튼
                 NavigationLink(destination: DetailView(), label: {Text("편집").foregroundColor(Color(hex: 0x0F0094))}).padding(.horizontal)
             }
