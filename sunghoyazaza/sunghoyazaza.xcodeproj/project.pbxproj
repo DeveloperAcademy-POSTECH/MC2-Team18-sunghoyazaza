@@ -69,6 +69,8 @@
 		A9F0ED9B2A08DE0E006E02B6 /* AppStorageKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0ED972A08CABD006E02B6 /* AppStorageKeyManager.swift */; };
 		B813F3332A0C9AAF003E7590 /* ScreenTImeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0ED572A08C0D4006E02B6 /* ScreenTImeVM.swift */; };
 		B813F33F2A0D36D7003E7590 /* ShieldContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B813F33E2A0D36D7003E7590 /* ShieldContent.swift */; };
+		E599684B2A0DDBB100EC02D5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E599684A2A0DDBB100EC02D5 /* Lottie */; };
+		E599684D2A0DDBC300EC02D5 /* LottieVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599684C2A0DDBC300EC02D5 /* LottieVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +180,7 @@
 		A9F0ED952A08C4F3006E02B6 /* sunghoyazaza.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sunghoyazaza.entitlements; sourceTree = "<group>"; };
 		A9F0ED972A08CABD006E02B6 /* AppStorageKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeyManager.swift; sourceTree = "<group>"; };
 		B813F33E2A0D36D7003E7590 /* ShieldContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldContent.swift; sourceTree = "<group>"; };
+		E599684C2A0DDBC300EC02D5 /* LottieVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E599684B2A0DDBB100EC02D5 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +350,7 @@
 				7FEA9E5A2A09D5C80050AA4B /* Onboarding2View.swift */,
 				12C3B77D2A0C838A001CF237 /* Onboarding0View.swift */,
 				12C3B77F2A0D0A19001CF237 /* PermissionView.swift */,
+				E599684C2A0DDBC300EC02D5 /* LottieVIew.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -420,6 +425,9 @@
 				A9F0ED902A08C49E006E02B6 /* PBXTargetDependency */,
 			);
 			name = sunghoyazaza;
+			packageProductDependencies = (
+				E599684A2A0DDBB100EC02D5 /* Lottie */,
+			);
 			productName = sunghoyazaza;
 			productReference = 7F37852A2A07AD650055EAB2 /* sunghoyazaza.app */;
 			productType = "com.apple.product-type.application";
@@ -552,6 +560,9 @@
 				Base,
 			);
 			mainGroup = 7F3785212A07AD650055EAB2;
+			packageReferences = (
+				E59968492A0DDBB100EC02D5 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 7F37852B2A07AD650055EAB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -643,6 +654,7 @@
 				7FBFF44E2A07C5B90069656E /* DateVM.swift in Sources */,
 				76CA10BA2A0C1C9F00689C42 /* Date.swift in Sources */,
 				A9F0ED5B2A08C209006E02B6 /* NotificationManager.swift in Sources */,
+				E599684D2A0DDBC300EC02D5 /* LottieVIew.swift in Sources */,
 				7FBFF44C2A07C5B90069656E /* MainModel.swift in Sources */,
 				12C3B7802A0D0A19001CF237 /* PermissionView.swift in Sources */,
 				7FBFF4492A07C5B90069656E /* DateValue.swift in Sources */,
@@ -1218,6 +1230,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E59968492A0DDBB100EC02D5 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E599684A2A0DDBB100EC02D5 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E59968492A0DDBB100EC02D5 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F3785222A07AD650055EAB2 /* Project object */;
 }
