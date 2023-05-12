@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		12C3B77E2A0C838A001CF237 /* Onboarding0View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C3B77D2A0C838A001CF237 /* Onboarding0View.swift */; };
 		12C3B7802A0D0A19001CF237 /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C3B77F2A0D0A19001CF237 /* PermissionView.swift */; };
+		12C3B7832A0DE698001CF237 /* HGCircularSlider in Frameworks */ = {isa = PBXBuildFile; productRef = 12C3B7822A0DE698001CF237 /* HGCircularSlider */; };
 		76CA10BA2A0C1C9F00689C42 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA10B92A0C1C9F00689C42 /* Date.swift */; };
 		76CA10BC2A0C1D9400689C42 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA10BB2A0C1D9400689C42 /* String.swift */; };
 		7F37852E2A07AD650055EAB2 /* sunghoyazazaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37852D2A07AD650055EAB2 /* sunghoyazazaApp.swift */; };
@@ -171,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12C3B7832A0DE698001CF237 /* HGCircularSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +407,9 @@
 				A9F0ED902A08C49E006E02B6 /* PBXTargetDependency */,
 			);
 			name = sunghoyazaza;
+			packageProductDependencies = (
+				12C3B7822A0DE698001CF237 /* HGCircularSlider */,
+			);
 			productName = sunghoyazaza;
 			productReference = 7F37852A2A07AD650055EAB2 /* sunghoyazaza.app */;
 			productType = "com.apple.product-type.application";
@@ -537,6 +542,9 @@
 				Base,
 			);
 			mainGroup = 7F3785212A07AD650055EAB2;
+			packageReferences = (
+				12C3B7812A0DE698001CF237 /* XCRemoteSwiftPackageReference "HGCircularSlider" */,
+			);
 			productRefGroup = 7F37852B2A07AD650055EAB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -837,7 +845,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sunghoyazaza/Preview Content\"";
-				DEVELOPMENT_TEAM = TAP4M2PF77;
+				DEVELOPMENT_TEAM = 78W7B5CV94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -869,7 +877,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sunghoyazaza/Preview Content\"";
-				DEVELOPMENT_TEAM = TAP4M2PF77;
+				DEVELOPMENT_TEAM = 78W7B5CV94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1190,6 +1198,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		12C3B7812A0DE698001CF237 /* XCRemoteSwiftPackageReference "HGCircularSlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HamzaGhazouani/HGCircularSlider";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		12C3B7822A0DE698001CF237 /* HGCircularSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12C3B7812A0DE698001CF237 /* XCRemoteSwiftPackageReference "HGCircularSlider" */;
+			productName = HGCircularSlider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F3785222A07AD650055EAB2 /* Project object */;
 }
