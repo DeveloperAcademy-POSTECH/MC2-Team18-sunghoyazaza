@@ -37,7 +37,7 @@ struct HGCircularSliderView: UIViewRepresentable {
         circularSlider.trackColor = UIColor(.gray)
         circularSlider.diskFillColor = UIColor(.black)
         circularSlider.diskColor = UIColor(.black)
-        circularSlider.backgroundColor = .white
+        circularSlider.backgroundColor = .systemGray6
         
         return circularSlider
     }
