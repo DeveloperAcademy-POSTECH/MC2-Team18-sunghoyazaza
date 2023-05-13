@@ -12,6 +12,14 @@
 		12C3B7832A0DE698001CF237 /* HGCircularSlider in Frameworks */ = {isa = PBXBuildFile; productRef = 12C3B7822A0DE698001CF237 /* HGCircularSlider */; };
 		76CA10BA2A0C1C9F00689C42 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA10B92A0C1C9F00689C42 /* Date.swift */; };
 		76CA10BC2A0C1D9400689C42 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA10BB2A0C1D9400689C42 /* String.swift */; };
+		76CA10BD2A0E774700689C42 /* DateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF43D2A07C5B90069656E /* DateVM.swift */; };
+		76CA10BE2A0E776D00689C42 /* DateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF43D2A07C5B90069656E /* DateVM.swift */; };
+		76CA10BF2A0E776E00689C42 /* DateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF43D2A07C5B90069656E /* DateVM.swift */; };
+		76CA10C12A0E77AE00689C42 /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4392A07C5B90069656E /* DateModel.swift */; };
+		76CA10C22A0E77BE00689C42 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA10BB2A0C1D9400689C42 /* String.swift */; };
+		76CA10C32A0E77C200689C42 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA10B92A0C1C9F00689C42 /* Date.swift */; };
+		76CA10C62A0E787500689C42 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA10BB2A0C1D9400689C42 /* String.swift */; };
+		76CA10C72A0E787600689C42 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA10BB2A0C1D9400689C42 /* String.swift */; };
 		7F37852E2A07AD650055EAB2 /* sunghoyazazaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37852D2A07AD650055EAB2 /* sunghoyazazaApp.swift */; };
 		7F3785352A07AD660055EAB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3785342A07AD660055EAB2 /* Preview Assets.xcassets */; };
 		7F37853F2A07AD660055EAB2 /* sunghoyazazaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37853E2A07AD660055EAB2 /* sunghoyazazaTests.swift */; };
@@ -24,8 +32,8 @@
 		7FBFF44D2A07C5B90069656E /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF43C2A07C5B90069656E /* MainVM.swift */; };
 		7FBFF44E2A07C5B90069656E /* DateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF43D2A07C5B90069656E /* DateVM.swift */; };
 		7FBFF44F2A07C5B90069656E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FBFF43F2A07C5B90069656E /* Assets.xcassets */; };
-		7FBFF4502A07C5B90069656E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4402A07C5B90069656E /* Fonts.swift */; };
-		7FBFF4512A07C5B90069656E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4412A07C5B90069656E /* Colors.swift */; };
+		7FBFF4502A07C5B90069656E /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4402A07C5B90069656E /* Font+Extension.swift */; };
+		7FBFF4512A07C5B90069656E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4412A07C5B90069656E /* Color+Extension.swift */; };
 		7FBFF4522A07C5B90069656E /* StartPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4432A07C5B90069656E /* StartPermissionView.swift */; };
 		7FBFF4532A07C5B90069656E /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4442A07C5B90069656E /* AlertView.swift */; };
 		7FBFF4542A07C5B90069656E /* SleepPlanBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4452A07C5B90069656E /* SleepPlanBottomView.swift */; };
@@ -36,7 +44,25 @@
 		7FEA9E572A09D55B0050AA4B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA9E562A09D55B0050AA4B /* OnboardingView.swift */; };
 		7FEA9E5B2A09D5C80050AA4B /* Onboarding2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA9E5A2A09D5C80050AA4B /* Onboarding2View.swift */; };
 		7FEA9E5D2A09E0610050AA4B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA9E5C2A09E0610050AA4B /* DetailView.swift */; };
-		A9F0ED582A08C0D4006E02B6 /* ScreenTImeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0ED572A08C0D4006E02B6 /* ScreenTImeVM.swift */; };
+		A92CA03D2A0CC2DD0061EEE2 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CA03C2A0CC2DD0061EEE2 /* CGFloat+Extension.swift */; };
+		A92CA03E2A0CC8FE0061EEE2 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4402A07C5B90069656E /* Font+Extension.swift */; };
+		A92CA03F2A0CC8FF0061EEE2 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4402A07C5B90069656E /* Font+Extension.swift */; };
+		A92CA0402A0CC8FF0061EEE2 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4402A07C5B90069656E /* Font+Extension.swift */; };
+		A92CA0412A0CC9020061EEE2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4412A07C5B90069656E /* Color+Extension.swift */; };
+		A92CA0422A0CC9030061EEE2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4412A07C5B90069656E /* Color+Extension.swift */; };
+		A92CA0432A0CC9030061EEE2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFF4412A07C5B90069656E /* Color+Extension.swift */; };
+		A92CA0442A0CC9060061EEE2 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CA03C2A0CC2DD0061EEE2 /* CGFloat+Extension.swift */; };
+		A92CA0452A0CC9070061EEE2 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CA03C2A0CC2DD0061EEE2 /* CGFloat+Extension.swift */; };
+		A92CA0462A0CC9080061EEE2 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CA03C2A0CC2DD0061EEE2 /* CGFloat+Extension.swift */; };
+		A94A97DA2A0F76B40012E8A9 /* ScreenTimeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97D92A0F76B40012E8A9 /* ScreenTimeVM.swift */; };
+		A94A97DB2A0F76FA0012E8A9 /* ScreenTimeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97D92A0F76B40012E8A9 /* ScreenTimeVM.swift */; };
+		A94A97DC2A0F76FB0012E8A9 /* ScreenTimeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97D92A0F76B40012E8A9 /* ScreenTimeVM.swift */; };
+		A94A97DD2A0F76FB0012E8A9 /* ScreenTimeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97D92A0F76B40012E8A9 /* ScreenTimeVM.swift */; };
+		A94A97DF2A0F7EC40012E8A9 /* Onboarding0VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97DE2A0F7EC40012E8A9 /* Onboarding0VM.swift */; };
+		A9D5C5732A0DD2DD002723F0 /* ShieldContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B813F33E2A0D36D7003E7590 /* ShieldContent.swift */; };
+		A9D5C5742A0DD2DE002723F0 /* ShieldContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B813F33E2A0D36D7003E7590 /* ShieldContent.swift */; };
+		A9D5C5752A0DD2DF002723F0 /* ShieldContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B813F33E2A0D36D7003E7590 /* ShieldContent.swift */; };
+		A9D5C5772A0E6ECC002723F0 /* PermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D5C5762A0E6ECC002723F0 /* PermissionViewModel.swift */; };
 		A9F0ED5B2A08C209006E02B6 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0ED5A2A08C209006E02B6 /* NotificationManager.swift */; };
 		A9F0ED632A08C2CD006E02B6 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F0ED622A08C2CD006E02B6 /* DeviceActivity.framework */; };
 		A9F0ED662A08C2CD006E02B6 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0ED652A08C2CD006E02B6 /* DeviceActivityMonitorExtension.swift */; };
@@ -53,10 +79,7 @@
 		A9F0ED992A08CB9B006E02B6 /* AppStorageKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0ED972A08CABD006E02B6 /* AppStorageKeyManager.swift */; };
 		A9F0ED9A2A08DE0D006E02B6 /* AppStorageKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0ED972A08CABD006E02B6 /* AppStorageKeyManager.swift */; };
 		A9F0ED9B2A08DE0E006E02B6 /* AppStorageKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0ED972A08CABD006E02B6 /* AppStorageKeyManager.swift */; };
-		B813F3322A0C982D003E7590 /* ScreenTImeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0ED572A08C0D4006E02B6 /* ScreenTImeVM.swift */; };
-		B813F3332A0C9AAF003E7590 /* ScreenTImeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0ED572A08C0D4006E02B6 /* ScreenTImeVM.swift */; };
 		B813F33F2A0D36D7003E7590 /* ShieldContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B813F33E2A0D36D7003E7590 /* ShieldContent.swift */; };
-		B813F3402A0D36E0003E7590 /* ShieldContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B813F33E2A0D36D7003E7590 /* ShieldContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,8 +156,8 @@
 		7FBFF43C2A07C5B90069656E /* MainVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		7FBFF43D2A07C5B90069656E /* DateVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateVM.swift; sourceTree = "<group>"; };
 		7FBFF43F2A07C5B90069656E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7FBFF4402A07C5B90069656E /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		7FBFF4412A07C5B90069656E /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7FBFF4402A07C5B90069656E /* Font+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		7FBFF4412A07C5B90069656E /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		7FBFF4432A07C5B90069656E /* StartPermissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPermissionView.swift; sourceTree = "<group>"; };
 		7FBFF4442A07C5B90069656E /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		7FBFF4452A07C5B90069656E /* SleepPlanBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepPlanBottomView.swift; sourceTree = "<group>"; };
@@ -145,7 +168,10 @@
 		7FEA9E562A09D55B0050AA4B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		7FEA9E5A2A09D5C80050AA4B /* Onboarding2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2View.swift; sourceTree = "<group>"; };
 		7FEA9E5C2A09E0610050AA4B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		A9F0ED572A08C0D4006E02B6 /* ScreenTImeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTImeVM.swift; sourceTree = "<group>"; };
+		A92CA03C2A0CC2DD0061EEE2 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		A94A97D92A0F76B40012E8A9 /* ScreenTimeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeVM.swift; sourceTree = "<group>"; };
+		A94A97DE2A0F7EC40012E8A9 /* Onboarding0VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding0VM.swift; sourceTree = "<group>"; };
+		A9D5C5762A0E6ECC002723F0 /* PermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewModel.swift; sourceTree = "<group>"; };
 		A9F0ED5A2A08C209006E02B6 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		A9F0ED602A08C2CD006E02B6 /* DeviceActivityMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F0ED622A08C2CD006E02B6 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
@@ -301,7 +327,9 @@
 			children = (
 				7FBFF43C2A07C5B90069656E /* MainVM.swift */,
 				7FBFF43D2A07C5B90069656E /* DateVM.swift */,
-				A9F0ED572A08C0D4006E02B6 /* ScreenTImeVM.swift */,
+				A9D5C5762A0E6ECC002723F0 /* PermissionViewModel.swift */,
+				A94A97D92A0F76B40012E8A9 /* ScreenTimeVM.swift */,
+				A94A97DE2A0F7EC40012E8A9 /* Onboarding0VM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -310,10 +338,11 @@
 			isa = PBXGroup;
 			children = (
 				7FBFF43F2A07C5B90069656E /* Assets.xcassets */,
-				7FBFF4402A07C5B90069656E /* Fonts.swift */,
-				7FBFF4412A07C5B90069656E /* Colors.swift */,
+				7FBFF4402A07C5B90069656E /* Font+Extension.swift */,
+				7FBFF4412A07C5B90069656E /* Color+Extension.swift */,
 				76CA10B92A0C1C9F00689C42 /* Date.swift */,
 				76CA10BB2A0C1D9400689C42 /* String.swift */,
+				A92CA03C2A0CC2DD0061EEE2 /* CGFloat+Extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -616,27 +645,30 @@
 				7FBFF4522A07C5B90069656E /* StartPermissionView.swift in Sources */,
 				A9F0ED982A08CABD006E02B6 /* AppStorageKeyManager.swift in Sources */,
 				B813F33F2A0D36D7003E7590 /* ShieldContent.swift in Sources */,
-				7FBFF4502A07C5B90069656E /* Fonts.swift in Sources */,
+				7FBFF4502A07C5B90069656E /* Font+Extension.swift in Sources */,
 				7FEA9E5B2A09D5C80050AA4B /* Onboarding2View.swift in Sources */,
+				A94A97DF2A0F7EC40012E8A9 /* Onboarding0VM.swift in Sources */,
 				7FBFF4552A07C5B90069656E /* MiddlePermissionView.swift in Sources */,
 				7FEA9E572A09D55B0050AA4B /* OnboardingView.swift in Sources */,
-				7FBFF4512A07C5B90069656E /* Colors.swift in Sources */,
+				7FBFF4512A07C5B90069656E /* Color+Extension.swift in Sources */,
 				7FBFF4572A07C5B90069656E /* CalendarView.swift in Sources */,
 				7FBFF4532A07C5B90069656E /* AlertView.swift in Sources */,
+				A92CA03D2A0CC2DD0061EEE2 /* CGFloat+Extension.swift in Sources */,
 				7F37852E2A07AD650055EAB2 /* sunghoyazazaApp.swift in Sources */,
 				7FBFF44D2A07C5B90069656E /* MainVM.swift in Sources */,
 				7FBFF4592A07C5EA0069656E /* MainView.swift in Sources */,
 				12C3B77E2A0C838A001CF237 /* Onboarding0View.swift in Sources */,
-				A9F0ED582A08C0D4006E02B6 /* ScreenTImeVM.swift in Sources */,
 				7FBFF44B2A07C5B90069656E /* DateModel.swift in Sources */,
 				7FBFF44A2A07C5B90069656E /* BlockApplicationModel.swift in Sources */,
 				76CA10BC2A0C1D9400689C42 /* String.swift in Sources */,
 				7FEA9E5D2A09E0610050AA4B /* DetailView.swift in Sources */,
 				7FBFF44E2A07C5B90069656E /* DateVM.swift in Sources */,
 				76CA10BA2A0C1C9F00689C42 /* Date.swift in Sources */,
+				A94A97DA2A0F76B40012E8A9 /* ScreenTimeVM.swift in Sources */,
 				A9F0ED5B2A08C209006E02B6 /* NotificationManager.swift in Sources */,
 				7FBFF44C2A07C5B90069656E /* MainModel.swift in Sources */,
 				12C3B7802A0D0A19001CF237 /* PermissionView.swift in Sources */,
+				A9D5C5772A0E6ECC002723F0 /* PermissionViewModel.swift in Sources */,
 				7FBFF4492A07C5B90069656E /* DateValue.swift in Sources */,
 				7FBFF4562A07C5B90069656E /* SleepPlanTopView.swift in Sources */,
 			);
@@ -664,9 +696,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F0ED992A08CB9B006E02B6 /* AppStorageKeyManager.swift in Sources */,
+				A92CA0412A0CC9020061EEE2 /* Color+Extension.swift in Sources */,
+				76CA10C62A0E787500689C42 /* String.swift in Sources */,
+				A9D5C5732A0DD2DD002723F0 /* ShieldContent.swift in Sources */,
+				76CA10BE2A0E776D00689C42 /* DateVM.swift in Sources */,
+				A92CA0442A0CC9060061EEE2 /* CGFloat+Extension.swift in Sources */,
 				A9F0ED962A08C9E6006E02B6 /* NotificationManager.swift in Sources */,
+				A92CA03E2A0CC8FE0061EEE2 /* Font+Extension.swift in Sources */,
 				A9F0ED662A08C2CD006E02B6 /* DeviceActivityMonitorExtension.swift in Sources */,
-				B813F3332A0C9AAF003E7590 /* ScreenTImeVM.swift in Sources */,
+				A94A97DB2A0F76FA0012E8A9 /* ScreenTimeVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,9 +712,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CA10BD2A0E774700689C42 /* DateVM.swift in Sources */,
 				A9F0ED7B2A08C48E006E02B6 /* ShieldConfigurationExtension.swift in Sources */,
+				76CA10C22A0E77BE00689C42 /* String.swift in Sources */,
 				A9F0ED9A2A08DE0D006E02B6 /* AppStorageKeyManager.swift in Sources */,
-				B813F3402A0D36E0003E7590 /* ShieldContent.swift in Sources */,
+				A92CA03F2A0CC8FF0061EEE2 /* Font+Extension.swift in Sources */,
+				A92CA0422A0CC9030061EEE2 /* Color+Extension.swift in Sources */,
+				76CA10C12A0E77AE00689C42 /* DateModel.swift in Sources */,
+				A92CA0452A0CC9070061EEE2 /* CGFloat+Extension.swift in Sources */,
+				76CA10C32A0E77C200689C42 /* Date.swift in Sources */,
+				A9D5C5742A0DD2DE002723F0 /* ShieldContent.swift in Sources */,
+				A94A97DC2A0F76FB0012E8A9 /* ScreenTimeVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,9 +730,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CA10BF2A0E776E00689C42 /* DateVM.swift in Sources */,
 				A9F0ED8C2A08C49E006E02B6 /* ShieldActionExtension.swift in Sources */,
 				A9F0ED9B2A08DE0E006E02B6 /* AppStorageKeyManager.swift in Sources */,
-				B813F3322A0C982D003E7590 /* ScreenTImeVM.swift in Sources */,
+				76CA10C72A0E787600689C42 /* String.swift in Sources */,
+				A92CA0402A0CC8FF0061EEE2 /* Font+Extension.swift in Sources */,
+				A92CA0432A0CC9030061EEE2 /* Color+Extension.swift in Sources */,
+				A92CA0462A0CC9080061EEE2 /* CGFloat+Extension.swift in Sources */,
+				A9D5C5752A0DD2DF002723F0 /* ShieldContent.swift in Sources */,
+				A94A97DD2A0F76FB0012E8A9 /* ScreenTimeVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,15 +903,14 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.sungho;
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazaza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -883,15 +934,14 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.sungho;
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazaza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -906,11 +956,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78W7B5CV94;
+				DEVELOPMENT_TEAM = V7Y39HNV38;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "shine-jung.sunghoyazazaTests";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazazaTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -926,11 +976,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78W7B5CV94;
+				DEVELOPMENT_TEAM = V7Y39HNV38;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "shine-jung.sunghoyazazaTests";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazazaTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -945,10 +995,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78W7B5CV94;
+				DEVELOPMENT_TEAM = V7Y39HNV38;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "shine-jung.sunghoyazazaUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazazaUITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -963,10 +1013,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RCM87YWJ79;
+				DEVELOPMENT_TEAM = V7Y39HNV38;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "shine-jung.sunghoyazazaUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazazaUITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -981,7 +1031,7 @@
 				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitor/DeviceActivityMonitor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78W7B5CV94;
+				DEVELOPMENT_TEAM = V7Y39HNV38;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DeviceActivityMonitor/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityMonitor;
@@ -992,7 +1042,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "shine-jung.sunghoyazaza.DeviceActivityMonitor";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazazaDevice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1007,7 +1057,7 @@
 				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitor/DeviceActivityMonitor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78W7B5CV94;
+				DEVELOPMENT_TEAM = V7Y39HNV38;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DeviceActivityMonitor/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityMonitor;
@@ -1018,7 +1068,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "shine-jung.sunghoyazaza.DeviceActivityMonitor";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazazaDevice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1033,7 +1083,7 @@
 				CODE_SIGN_ENTITLEMENTS = ShieldConfiguration/ShieldConfiguration.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78W7B5CV94;
+				DEVELOPMENT_TEAM = V7Y39HNV38;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShieldConfiguration/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ShieldConfiguration;
@@ -1044,7 +1094,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "shine-jung.sunghoyazaza.ShieldConfiguration";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazazaShield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1059,7 +1109,7 @@
 				CODE_SIGN_ENTITLEMENTS = ShieldConfiguration/ShieldConfiguration.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78W7B5CV94;
+				DEVELOPMENT_TEAM = V7Y39HNV38;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShieldConfiguration/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ShieldConfiguration;
@@ -1070,7 +1120,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "shine-jung.sunghoyazaza.ShieldConfiguration";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazazaShield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1085,7 +1135,7 @@
 				CODE_SIGN_ENTITLEMENTS = ShieldAction/ShieldAction.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78W7B5CV94;
+				DEVELOPMENT_TEAM = V7Y39HNV38;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShieldAction/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ShieldAction;
@@ -1096,7 +1146,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "shine-jung.sunghoyazaza.ShieldAction";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazazaAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1111,7 +1161,7 @@
 				CODE_SIGN_ENTITLEMENTS = ShieldAction/ShieldAction.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78W7B5CV94;
+				DEVELOPMENT_TEAM = V7Y39HNV38;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShieldAction/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ShieldAction;
@@ -1122,7 +1172,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "shine-jung.sunghoyazaza.ShieldAction";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.com.sunghoyazazaAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

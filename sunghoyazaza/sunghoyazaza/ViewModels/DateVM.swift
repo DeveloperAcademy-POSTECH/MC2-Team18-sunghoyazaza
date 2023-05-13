@@ -39,8 +39,7 @@ struct DateVM{
         return date ?? Date()
     }
     
-    var dateModel = DateModel.shared
-    
+//`1    36-`
 //    //MARK: 데이터를 활용해 목표 달성한 날짜 뿌려주기
 //    func datesHavingDots()->[DateMetaData]{
 //        var datesHavingDots : [DateMetaData] = dateModel.datesForTasks.map { offset in

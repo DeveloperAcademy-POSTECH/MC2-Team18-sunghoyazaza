@@ -6,100 +6,173 @@
 //
 
 import SwiftUI
+import FamilyControls
 
 struct PermissionView: View {
+    @Environment(\.scenePhase) private var scenePhase
     
-    @State private var navigationIsActive: Bool = false
+    @StateObject
+    var vm = PermissionViewModel()
     
-    func enableNavigationLink () {
-        
-    }
+    private var pageContents =
+    """
+    머스트 슬립은 아래 기능들에
+    대한 권한 설정이 필요해요
+    권한 설정을 완료하면
+    첫 수면 계획을 만들러 갈 수 있어요
+    """
+       
+    @State
+    private var isNavigationActive = false
+    
+    @State
+    private var showAlert = false
     
     var body: some View {
         VStack{
-            
-            Text("머스트 슬립은\n아래 기능들에 대한 권한 설정이 필요해요\n권한을 설정을 완료하면\n첫 수면 계획을 만들러 갈 수 있어요")
-                .font(.system(size: 20, weight: .bold))
-                .lineSpacing(8)
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top, 16)
-                .padding(.bottom, 24)
-                .padding([.horizontal], 16)
-            
-            VStack {
-                
-                Text("선택 권한")
-                    .font(.system(size: 15, weight: .regular))
-                    .foregroundColor(Color(hex: "AEAEB2"))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Button {
-                    print("Notifications Permission Button Clicked")
-                } label: {
-                    HStack{
-                        Image("Notifications_Icon")
-                            .padding([.vertical], 10)
-                            .padding(.trailing, 8)
-                        Text("알림")
-                            .foregroundColor(Color(hex: "000000"))
-                        Spacer()
-                        Text("설정 완료")
-                            .padding(.trailing, 10)
+            pageTitleView()
+            RequestPermissionButtonView()
+                .alert(
+                    "알림이 이전에 거부되었어요",
+                    isPresented: $showAlert
+                ) {
+                    Button {
+                        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+                    } label: {
+                        Text("설정으로 가기")
                     }
-                }
-                .buttonStyle(.bordered)
-                .tint(Color(hex: "3F3F3F")) // 배경 색이 적용이 안돼서 일단 아무 색깔로 해놓음 (바꿔야 함)
-                
-                Text("자야 할 시간이 되기 5분 전에 알림을 받을 수 있고,\n약속한 15분이 끝나기 5분 전에 알림을 받을 수 있어요")
-                    .font(.system(size: 15, weight: .regular))
-                    .foregroundColor(Color(hex: "8E8E93"))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-            
-            }
-            .padding([.horizontal], 16)
-            .padding(.bottom, 24)
-            
-            VStack {
-                
-                Text("필수 권한")
-                    .font(.system(size: 15, weight: .regular))
-                    .foregroundColor(Color(hex: "AEAEB2"))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Button {
-                    print("Screen Time Permission Button Clicked")
-                } label: {
-                    HStack{
-                        Image("Screen_Time_Icon")
-                            .padding([.vertical], 10)
-                            .padding(.trailing, 8)
-                        Text("스크린 타임")
-                        Spacer()
-                        Text("설정 완료")
-                            .padding(.trailing, 10)
+                    Button(role: .cancel) {
+                        // Handle the deletion.
+                    } label: {
+                        Text("닫기")
                     }
+                } message: {
+                    Text("알림은 한 번 거부되면 설정에서 변경해야 해요 설정에서 알림을 허용해 주세요")
                 }
-                .buttonStyle(.bordered)
-                .tint(Color(hex: "3F3F3F")) // 배경 색이 적용이 안돼서 일단 아무 색깔로 해놓음 (바꿔야 함)
-                
-                Text("자야 할 시간에 잠에 드는 데 방해가 되는 앱을 선택하고\n자야 할 시간이 됐을 때 사용을 제한할 수 있어요")
-                    .font(.system(size: 15, weight: .regular))
-                    .foregroundColor(Color(hex: "8E8E93"))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-            }
-            .padding([.horizontal], 16)
-            
+                .padding([.top, .horizontal], .spacing24)
             Spacer()
+            //MARK: 16.0 이상 was deprecated
+            GoToOnboardingButtonView()
+        }
+        .background(Color.systemGray6, ignoresSafeAreaEdges: .all)
+        .onAppear {
+            vm.updatePermissionStatus()
+        }
+        .onChange(of: ScreenTimeVM.shared.authorizationCenter.authorizationStatus) {
+            authStatus in
+            vm.updatePermissionStatus()
             
-            NavigationLink("첫 수면 계획 만들러 가기", destination: OnboardingView(), isActive: $navigationIsActive)
-                .padding()
-                .frame(width: 240)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+        }
+        .onReceive(NotificationManager.shared.$sharedHasNotificationPermission) { status in
+            vm.updatePermissionStatus()
+        }
+        .onReceive(ScreenTimeVM.shared.$sharedHasScreenTimePermission) { authStatus in
+            vm.updatePermissionStatus()
+        }
+    }
+}
+
+// MARK: Views
+extension PermissionView {
+    
+    // MARK: 타이틀
+    func pageTitleView() -> some View {
+        Text(pageContents)
+            .font(Font.systemTitle3)
+            .multilineTextAlignment(.center)
+            .padding([.horizontal, .bottom], .spacing16)
+            .padding(.top, .spacing56)
+            .frame(maxWidth: .infinity)
+    }
+    
+    // MARK: 권한요청 버튼 리스트
+    func RequestPermissionButtonView() -> some View {
+        VStack(alignment: .leading, spacing: .spacing24) {
+            RequestButtonView(
+                staticInfo: vm.notificationButtonInfo,
+                buttonStatus: vm.notificationButtonStatus,
+                hasPermission: vm.hasNotificationPermission
+            )
+            RequestButtonView(
+                staticInfo: vm.screenTimeButtonInfo,
+                buttonStatus: vm.screenTimeButtonStatus,
+                hasPermission: vm.hasScreenTimePermission
+            )
+        }
+    }
+
+    // MARK: 권한요청 버튼
+    func RequestButtonView(
+        staticInfo: PermissionButtonInfo,
+        buttonStatus: PermissionButtonStatus,
+        hasPermission: Bool) -> some View {
+        VStack(alignment: .leading ,spacing: 0) {
+            // sectionHeader
+            HStack(spacing: 0) {
+                Text(staticInfo.headerText)
+                    .font(.systemSubInfo)
+                    .foregroundColor(.systemGray2)
+                    .padding(.trailing, .spacing2)
+                Image(systemName: buttonStatus.img)
+                    .font(.systemSubInfo)
+                    .foregroundColor(buttonStatus.color)
+            }
+            .padding(.leading, .spacing8)
+            .padding(.bottom, .spacing4)
+            // sectionBody
+            Button {
+                if staticInfo.permissionName == "알림" && NotificationManager.shared.sharedHasNotificationPermission == 0 {
+                    showAlert = true
+                }
+                vm.handlePermissionButton(permissionName: staticInfo.permissionName)
+            } label: {
+                HStack{
+                    Image(staticInfo.src)
+                    Text(staticInfo.permissionName)
+                        .tint(Color.systemBlack)
+                    Spacer()
+                    Text(buttonStatus.label)
+                        .frame(width: 100, height: 50)
+                        .foregroundColor(hasPermission ? Color.systemGray2 : Color.primary)
+                }
+                .padding([.leading, .vertical], .spacing16)
+                .padding(.trailing, .spacing8)
+            }
+            .disabled(hasPermission)
+            .background(hasPermission ? Color.systemGray4 : Color.systemWhite)
+            .cornerRadius(16)
+            .padding(.bottom, .spacing8)
+            // sectionFooter
+            Text(staticInfo.footerText)
+                .font(Font.systemSubHeadline)
+                .foregroundColor(.systemGray)
+                .multilineTextAlignment(.leading)
+                .lineLimit(2)
+                .frame(maxWidth: .infinity, minHeight: 40, alignment: .leading)
+                .padding(.leading, .spacing8)
+        }
+    }
+    
+    // MARK: 시작하기 버튼
+    func GoToOnboardingButtonView() -> some View{
+        VStack {
+            Button {
+                ScreenTimeVM.shared.requestAuthorization()
+                isNavigationActive = true
+            } label: {
+                Text("시작하기")
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .foregroundColor(
+                vm.hasScreenTimePermission ? .systemWhite : .systemGray2)
+            .background(vm.hasScreenTimePermission ? Color.accentColor : Color.systemGray4)
+            .disabled(!vm.hasScreenTimePermission)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .padding([.horizontal, .bottom], CGFloat.spacing24)
+            NavigationLink(destination: OnboardingView(), isActive: $isNavigationActive) {
+                EmptyView()
+            }
         }
     }
 }

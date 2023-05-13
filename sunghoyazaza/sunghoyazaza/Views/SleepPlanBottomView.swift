@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct SleepPlanBottomView: View {
+    @State var dataCount = MainVM().blockApplicationCount()
+
     var body: some View {
         
         // 차단된 앱 개수 변수
-        @State var dataCount = MainVM().blockApplicationCount()
-        
         // 전체 Stack
         VStack {
             

@@ -56,5 +56,6 @@ struct Onboarding2View: View {
                     }
                 }
             }
+            .background(Color.systemGray6, ignoresSafeAreaEdges: .all)
     }
 }

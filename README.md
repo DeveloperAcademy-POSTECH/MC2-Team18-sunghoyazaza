@@ -1,6 +1,6 @@
-# MC2-Team18-SungHozaza
+# MC2-Team18-MustSleep
 
-<h1 align="middle">😴SungHozaza😴</h1>
+<h1 align="middle">😴MustSleep😴</h1>
 <p align="middle">“수면 습관을 잡기 힘든 공시생들에게!” </p>
 <p align="middle"> 스크린타임을 활용해 스마트폰을 제한하여 수면 습관을 잡아주는 서비스입니다!</p>
 

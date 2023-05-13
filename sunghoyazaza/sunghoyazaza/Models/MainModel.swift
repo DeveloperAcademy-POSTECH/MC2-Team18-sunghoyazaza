@@ -16,46 +16,32 @@ struct MainModel{
     var mainLabel:String{
         switch dateModel.grade{
         case .noRecord:
-            return "noRecord"
+            return "수면 계획을 달성하고\n첫걸음을 내디뎌요 👣"
         case .successContinue:
-            return "successContinue - \(dateModel.recentSuccessCount)"
+            return "\(dateModel.recentSuccessCount)일 연속으로\n수면 계획을 달성했어요 🔥"
         case .firstSuccess:
-            return "firstSuccess"
+            return "수면 계획을\n처음으로 달성했어요 🎉"
         case .onlyFail:
-            return "onlyFail"
+            return "수면 계획을 달성하고\n첫걸음을 내디뎌요 👣"
         case .failAfterSuccess:
-            return "failAfterSuccess"
+            return "기록이 깨졌지만\n힘내서 다시 시작해요 💪"
         case .failContinueAfterSuccess:
-            return "failContinueAfterSuccess - \(dateModel.recentFailCount)"
+            return "수면 계획 달성이\n\(dateModel.recentFailCount)일째 안되고 있어요 🥺"
         case .successFailSuccess:
-            return "successFailSuccess"
+            return "초심을 찾으셨군요\n오늘부터 다시 달려요 🏃"
         @unknown default:
             return "another"
             
         }
     }
-
+    let subLabelList:[String] = [
+        "7시간 이상의 숙면은 내일의 집중을 도와줍니다.",
+        "오늘 하루도 열심히 공부해요",
+        "6시간 이상 숙면은 집중력 향상에 도움이 됩니다",
+    ]
     // 메인 화면 상단 응원 텍스트 DB
     var subLabel:String{
-        switch dateModel.grade{
-        case .noRecord:
-            return "noRecord"
-        case .successContinue:
-            return "successContinue"
-        case .firstSuccess:
-            return "firstSuccess"
-        case .onlyFail:
-            return "onlyFail"
-        case .failAfterSuccess:
-            return "failAfterSuccess"
-        case .failContinueAfterSuccess:
-            return "failContinueAfterSuccess"
-        case .successFailSuccess:
-            return "case successFailSuccess"
-        @unknown default:
-            return "another"
-            
-        }
+        subLabelList[Int(arc4random_uniform(UInt32(Int32(subLabelList.count))))]
     }
     
     //MARK: 달력 DB는 따로 정리 ==> DateModel()

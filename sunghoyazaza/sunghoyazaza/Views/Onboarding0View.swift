@@ -8,69 +8,77 @@
 import SwiftUI
 
 struct Onboarding0View: View {
+    
+    @StateObject
+    var vm = Onboarding0VM()
+    
+    @State
+    private var isNavigationActive = false
+    
     var body: some View {
         VStack {
-            TabView {
-                VStack {
-                    Text("머스트 슬립과 함께\n자야 할 시간에 잠에 들고\n내일의 계획을 지켜 보세요")
-                        .modifier(TitleText())
-                    Spacer()
-                    Image("Onboarding_1")
-                        .modifier(Illustration())
-                }
-                VStack {
-                    Text("⚙️ 수면 계획 설정")
-                        .modifier(TitleText())
-                    Text("⏰ 수면 루틴 : 수면 시간과 요일을 선택해요\n⚠️ 제한할 앱 : 방해가 되는 앱을 선택해요")
-                        .modifier(BodyText())
-                    Spacer()
-                    Image("Onboarding_2")
-                        .modifier(Illustration())
-                }
-                VStack {
-                    Text("😴 수면 계획 실행")
-                        .modifier(TitleText())
-                    Text("‘수면 루틴’에 해당하는 시간이 되면\n‘제한할 앱’에 해당하는 앱이 제한돼요")
-                        .modifier(BodyText())
-                    Spacer()
-                    Image("Onboarding_3")
-                        .modifier(Illustration())
-                }
-                VStack {
-                    Text("🔥 연속 달성 기록 확인")
-                        .modifier(TitleText())
-                    Text("몇 회 연속으로 자야 할 시간에 잠에 들었는지,\n현재 달성 중인 기록을 확인할 수 있어요")
-                        .modifier(BodyText())
-                    Spacer()
-                    Image("Onboarding_4")
-                        .modifier(Illustration())
-                }
-                VStack {
-                    Text("⏳ 딱 15분만!")
-                        .modifier(TitleText())
-                    Text("제한된 앱의 사용을 참는게 너무나도 힘들면\n우리, 딱 15분만 사용하기로 약속해요\n단, 현재 달성 중인 기록은 깨지게 돼요")
-                        .modifier(BodyText())
-                    Spacer()
-                    Image("Onboarding_5")
-                        .modifier(Illustration())
-                }
-                VStack {
-                    Text("머스트 슬립이\n자야 할 시간에 잠에 들도록 도와드리려면\n몇 가지 기능에 대한 권한 설정이 필요해요\n권한을 설정하고 내일의 계획을 지켜보세요")
-                        .modifier(SemiTitleText())
-                    Spacer()
-                    Image("Onboarding_6")
-                        .modifier(Illustration())
+            CarouselContainerView()
+            GoToPermissionButtonView()
+        }
+        .background(Color.systemGray6, ignoresSafeAreaEdges: .all)
+    }
+}
+
+// MARK: Views
+extension Onboarding0View {
+    // MARK: 캐로셀 컨테이너 뷰
+    func CarouselContainerView() -> some View {
+        TabView {
+            ForEach(vm.carouselItems) {
+                carouselItem in
+                CarouselItemView(info: carouselItem)
+            }
+        }
+        .tabViewStyle(.page)
+        .indexViewStyle(.page(backgroundDisplayMode: .always))
+    }
+    
+    func CarouselItemView(info: CarouselItemInfo) -> some View {
+        VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 8){
+                Text(info.labelTitle)
+                    .font(info.idx == 0 ? .systemTitle : info.idx == 5 ? .systemTitle3 : .systemTitle)
+                    .bold()
+                if info.idx > 0 && info.idx < 5 {
+                    Text(info.labelBody)
+                        .font(.systemTitle3)
+                        .kerning(-0.5)
                 }
             }
-            .tabViewStyle(.page)
-            .indexViewStyle(.page(backgroundDisplayMode: .always))
-            
-            NavigationLink("권한 설정하러 가기", destination: PermissionView())
-                .padding()
-                .frame(width: 240)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            .padding(.top, .spacing56)
+            .padding(.horizontal, .spacing24)
+            .frame(minHeight: 240, maxHeight: 240, alignment: .topLeading)
+//            .border(.red)
+            Image(info.src)
+                .resizable()
+                .scaledToFit()
+//                .border(.red)
+        }
+//        .border(.red)
+    }
+    
+    // MARK: 시작하기 버튼
+    func GoToPermissionButtonView() -> some View {
+        VStack {
+            Button {
+                isNavigationActive = true
+            } label: {
+                Text("권한 설정하러 가기")
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .foregroundColor(.systemWhite)
+            .background(Color.accentColor)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .padding([.horizontal, .bottom], CGFloat.spacing24)
+            NavigationLink(destination: PermissionView(), isActive: $isNavigationActive) {
+                EmptyView()
+            }
         }
     }
 }
@@ -78,59 +86,6 @@ struct Onboarding0View: View {
 struct Onboarding0View_Previews: PreviewProvider {
     static var previews: some View {
         Onboarding0View()
-    }
-}
-
-struct TitleText: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.system(size: 30, weight: .bold))
-            .lineSpacing(8)
-            .foregroundColor(.black)
-            .frame(maxWidth: .infinity, alignment: .leading)
-//            .background(.yellow) // 영역 확인용
-//            .border(Color.pink) // 영역 확인용
-            .padding([.top], 60)
-            .padding([.horizontal], 16)
-    }
-}
-
-struct SemiTitleText: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.system(size: 20, weight: .bold))
-            .lineSpacing(8)
-            .foregroundColor(.black)
-            .frame(maxWidth: .infinity, alignment: .leading)
-//            .background(.yellow) // 영역 확인용
-//            .border(Color.pink) // 영역 확인용
-            .padding([.top], 60)
-            .padding([.horizontal], 16)
-    }
-}
-
-struct BodyText: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.system(size: 20, weight: .semibold))
-            .lineSpacing(8)
-            .foregroundColor(.black)
-            .frame(maxWidth: .infinity, alignment: .leading)
-//            .background(.blue) // 영역 확인용
-//            .border(Color.pink) // 영역 확인용
-            .padding([.top], 10)
-            .padding([.horizontal], 16)
-    }
-}
-
-struct Illustration: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .frame(maxWidth: .infinity)
-//            .background(.green) // 영역 확인용
-//            .border(Color.pink) // 영역 확인용
-            .padding([.bottom], 150)
-            .padding([.horizontal], 16)
     }
 }
 
